@@ -1,0 +1,110 @@
+.main__container__main .search {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    background-color: var(--main-color);
+    padding: 21px;
+    border-radius: 7px;
+}
+
+
+.search h2 {
+    margin-left: 2px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.search__form__input {
+    background-image: url('../images/search/search.svg');
+    background-color: #0D1520;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 17px;
+    background-size: 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 48px;
+    padding: 0 49px;
+    font-family: inherit;
+}
+
+/* SEARCH FORM INPUT PLACEHOLDER */
+.search__form__input::placeholder {
+    color: white;
+}
+
+/* CONTAINER WITH SEARCH AND FILTER */
+.search__search-and-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+}
+
+/* FILTER */
+.filter_form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: #0D1520;
+    padding: 9px 9px 9px 24px;
+    border-radius: 10px;
+}
+
+/* FILTER ADD BUTTON */
+.filter-add-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 8px 8px 12px;
+    cursor: pointer;
+}
+
+.filter-add-button img {
+    width: 12px;
+    height: 12px;
+}
+
+.filter-add-button p {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+/* FILTER BUTTON */
+.filter-button {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+/* FILTER CATEGORIES */
+.filter__form__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* FILTER CATEGORY */
+.filter__form__category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--category-color);
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.filter__form__category + .accent {
+    background-color: var(--btn-accent-color);
+}
+
+.filter__form__category img {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}

@@ -1,0 +1,114 @@
+/* SEARCH */
+.main__left-side .search-and-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 11.5px;
+    background-color: var(--main-color);
+    padding: 22px;
+    border-radius: 7px;
+}
+
+/* SEARCH TITLE */
+.search-and-filters h2 {
+    margin-left: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+/* SEARCH FORM INPUT */
+.search__input {
+    width: 211px;
+    height: 25px;
+    background-image: url('../images/search/search.svg');
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 8.5px;
+    background-size: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 48px;
+    padding: 0 25px;
+    font-family: inherit;
+}
+
+/* SEARCH FORM INPUT PLACEHOLDER */
+.search__input::placeholder {
+    color: white;
+}
+
+/* CONTAINER WITH SEARCH AND FILTER */
+.search-and-filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9.5px;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    background-color: var(--bg-color);
+    padding: 4.5px 4.5px 4.5px 12px;
+    border-radius: 5px;
+}
+
+/* FILTER ADD BUTTON */
+.filters__plus-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 4px 4px 6px;
+    cursor: pointer;
+}
+
+.filters__plus-button img {
+    width: 6px;
+    height: 6px;
+}
+
+.filters__plus-button p {
+    font-size: 6.5px;
+    line-height: 8px;
+}
+
+/* FILTER BUTTON */
+.filters__button {
+    width: 6px;
+    height: 6px;
+    cursor: pointer;
+}
+
+/* FILTER CATEGORIES */
+.filters__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* FILTER CATEGORY */
+.filters__category {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: var(--category-color);
+    font-size: 6.5px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.filters__category + .accent {
+    background-color: var(--button-accent-color);
+}
+
+.filters__category img {
+    width: 6px;
+    height: 6px;
+    cursor: pointer;
+}

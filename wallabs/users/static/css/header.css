@@ -1,0 +1,51 @@
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 2px;
+    padding-inline: 20px;
+    margin-bottom: 15px;
+}
+
+/* LOGO */
+.logo {
+    width: 144.62px;
+    height: 48px;
+}
+
+/* HEADER NAV */
+.header__nav {
+    display: flex;
+    gap: 40px;
+}
+
+/* HEADER NAV LINK */
+.nav__link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+    color: white;
+}
+
+.nav__link:hover {
+    transition: color ease .4s;
+    color: var(--accent-color);
+}
+
+.nav__link + .active {
+    color: var(--accent-color);
+}
+
+/* HEADER SOCIAL NETWORK LINKS */
+.header__social-networks {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 10px;
+    font-size: 12px;
+}

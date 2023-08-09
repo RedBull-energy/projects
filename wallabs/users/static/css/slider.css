@@ -1,0 +1,42 @@
+.slider img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* SLIDER IMAGE */
+.slider__image {
+    position: relative;
+    width: fit-content;
+}
+
+/* SLIDER BUTTONS */
+.slider__buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    gap: 18px;
+}
+
+/* SLIDER BUTTON */
+.slider__button {
+    width: 9px;
+    height: 9px;
+    background-color: var(--slider-button-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__button:hover {
+    transition: background-color ease .4s;
+    background-color: var(--slider-button-active-color);;
+}
+
+/* SLIDER ACTIVE BUTTON */
+.slider__button + .active {
+    background-color: var(--slider-button-active-color);
+}
+
+/* sign up */
+

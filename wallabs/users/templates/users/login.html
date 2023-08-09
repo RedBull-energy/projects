@@ -1,0 +1,155 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Site description coming soon...">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.svg' %}">
+    <title>forawatch</title>
+    <!-- CSS FOR STYLE RESET -->
+
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <!-- CSS FOR HEADER -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <!-- CSS FOR SLIDER -->
+
+    <!-- CSS FOR LOGIN-->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- CSS FOR SEARCH AND FILTERS -->
+    <link rel="stylesheet" href="{% static 'css/search-and-filters.css' %}">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+</head>
+<body>
+<!-- CONTAINER -->
+<div class="container">
+    <!-- HEADER -->
+    <header>
+        <a class="logo" href="#">
+            <img src="{% static 'images/header/logo.svg' %}" alt="logo" width="87.75" height="48">
+        </a>
+        <!-- HEADER NAV -->
+        <nav class="header__nav">
+            <a class="nav__link" href="#">Team</a>
+            <a class="nav__link active" href="#">Main Page</a>
+            <a class="nav__link" href="#">About</a>
+            <a class="nav__link" href="#">Content</a>
+        </nav>
+        <!-- HEADER SOCIAL NETWORKS -->
+        <div class="header__social-networks">
+            <a href="#">Follow us on</a>
+            <a href="#">
+                <img src="{% static 'images/header/twitter_icon.svg' %}" alt="twitter">
+            </a>
+            <a href="#">
+                <img src="{% static 'images/header/facebook_icon.svg' %}" alt="facebook">
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- MAIN CONTAINER -->
+        <div class="main__container">
+            <!-- LEFT SIDE -->
+            <div class="main__left-side">
+                <!-- SLIDER -->
+                <div class="slider">
+                    <div class="slider__image">
+                        <img src="{% static 'images/slider/slider-image.webp' %}" alt="slider-image" width="1015" height="611">
+                        <div class="slider__buttons">
+                            <button class="slider__button" aria-label="slider button"></button>
+                            <button class="slider__button" aria-label="slider button"></button>
+                            <button class="slider__button active" aria-label="slider button"></button>
+                            <button class="slider__button" aria-label="slider button"></button>
+                            <button class="slider__button" aria-label="slider button"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEARCH AND FILTERS -->
+                <div class="search-and-filters">
+                    <h2>Welcome to your newest and best <br>
+                        streaming platform!</h2>
+                    <div class="search-and-filters-container">
+                        <div class="search">
+                            <form>
+                                <label>
+                                    <input class="search__input" type="text" placeholder="Search">
+                                </label>
+                            </form>
+                        </div>
+                        <div class="filters">
+                            <img class="filters__button" src="{% static 'images/search/filter.svg' %}" alt="filter">
+                            <div class="filters__plus-button">
+                                <img src="{% static 'images/search/plus.svg' %}" alt="plus">
+                                <p>Filter</p>
+                            </div>
+                            <div class="filters__categories">
+                                <div class="filters__category">
+                                    <p>Anime</p>
+                                    <img src="{% static 'images/search/cross.svg' %}" alt="cross">
+                                </div>
+                                <div class="filters__category accent">
+                                    <p>Comedy</p>
+                                    <img src="{% static 'images/search/cross.svg' %}" alt="cross">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT SIDE (LOGIN) -->
+            <div class="main__right-side">
+                <h2>Sign in</h2>
+                <form method="post">
+                    {% block content %}
+                    {% csrf_token %}
+                    {% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+  {% else %}
+    <p>Please login to see this page.</p>
+  {% endif %}
+{% endif %}
+                    <label>
+                        {{ form.username.label_tag }}
+                        {{ form.username }}<br>
+
+                    </label>
+                    <label>
+
+                        <span class="login-label">
+{{ form.password.label_tag }}
+
+                            <span class="hide-button">
+                                <img src="{% static 'images/login/hide.svg' %}" alt="hide" width="18" height="16">
+                                <span>Hide</span>
+                            </span>
+                        </span>
+{{ form.password }}
+                    </label>
+                    {% endblock %}
+
+                    <a href="{% url 'home' %}"><button class="button login-button">Sign in</button></a>
+                    <a href="#">Forgot your password?</a>
+</form>
+                <a href="{% url 'home:signup' %}"><button class="button create-button">Create an account</button></a>
+
+                <button class="google-button">
+
+                    <img src="{% static 'images/login/google.svg' %}" alt="google" width="14.4" height="14.4">
+                    Continue with Google пошел нахуй
+                </button>
+
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

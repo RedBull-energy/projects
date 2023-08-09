@@ -1,0 +1,226 @@
+/* CONNECTING FONTS */
+
+/* POPPINS REGULAR */
+@font-face {
+    font-family: "Poppins";
+    font-display: swap;
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+
+/* POPPINS MEDIUM */
+@font-face {
+    font-family: "Poppins";
+    font-display: swap;
+    src: url("../fonts/Poppins-Medium.ttf");
+    font-weight: 500;
+}
+
+/* POPPINS BOLD */
+@font-face {
+    font-family: "Poppins";
+    font-display: swap;
+    src: url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+
+/* AVENIR ROMAN */
+@font-face {
+    font-family: "Avenir";
+    font-display: swap;
+    src: url("../fonts/Avenir-Roman.ttf");
+    font-weight: 400;
+}
+
+/* COLORS */
+:root {
+    --bg-color: #0D1520;
+    --main-color: #131F2F;
+    --accent-color: #FAE596;
+    --slider-button-color: #404C59;
+    --slider-button-active-color: #AABCD0;
+    --button-accent-color: #0b8185;
+    --category-color: #547192;
+    --form-link-color: #3FB0AC;
+    --disabled-button-color: rgba(84, 113, 146, 0.25);
+    --google-button-border-color: #333333;
+}
+
+/* CUSTOMS */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a, a:hover, a:active, a:focus, button, img, div {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible, button:focus-visible {
+    outline-color: white;
+}
+
+.button {
+    width: 312px;
+    border-radius: 24px;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+img, p {
+    display: block;
+}
+
+/* BODY */
+body {
+    background-color: var(--bg-color);
+    font-family: Poppins, sans-serif;
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1920px;
+    padding: 0 15px;
+    margin: 15px 50px;
+}
+
+.main__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+}
+
+/* LEFT SIDE CONTAINER */
+.main__left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 17.5px;
+    width: 100%;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE */
+
+/* EXTRA LARGE SCREENS */
+@media screen and (max-width: 1440px) {
+}
+
+/* LARGE SCREENS */
+@media screen and (max-width: 1200px) {
+    .header__nav, .header__social-networks {
+        display: none;
+    }
+
+    .slider__buttons {
+        display: none;
+    }
+
+    .main__container {
+        flex-wrap: wrap;
+    }
+}
+
+/* DESKTOPS */
+@media screen and (max-width: 1024px) {
+    .search-and-filters h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+/* TABLETS */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px auto 35px auto;
+    }
+
+    header {
+        margin-bottom: 15px;
+    }
+
+    .logo img, .logo {
+        width: 123px;
+        height: 57px;
+    }
+
+    .search__input, .search {
+        width: 100%;
+    }
+
+    .main__right-side h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .main__right-side {
+        padding: 30px 15px;
+    }
+
+    .main__right-side form {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .main__right-side form label input {
+        width: 100%;
+    }
+
+    .main__right-side form a {
+        font-size: 16px;
+    }
+
+    .create-button, .create-button, .google-button, .login-button {
+        font-size: 16px;
+        padding: 9px 0;
+    }
+
+    .google-button {
+        gap: 10px;
+    }
+
+    .create-button {
+        margin-bottom: 15px;
+    }
+
+    .main__right-side {
+        width: 100%;
+    }
+}
+
+/* MOBILE PHONES */
+@media screen and (max-width: 480px) {
+    .main__left-side .search-and-filters {
+        padding: 15px;
+    }
+
+    .search__input {
+        font-size: 18px;
+    }
+
+    .search-and-filters h2 {
+        font-size: 20px;
+    }
+
+    .search__input {
+        height: 36px;
+        font-size: 14px;
+        padding: 0 40px;
+        background-size: 15px;
+        background-position-x: 15px;
+    }
+
+    .filters {
+        padding-left: 15px;
+    }
+}

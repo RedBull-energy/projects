@@ -1,0 +1,101 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="{% static 'images\favicon.svg' %}">
+    <title>forawatch</title>
+    <link rel="stylesheet" href="{% static 'css/reset_signup.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/header_signup.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/login_signup.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style_signup.css' %}"/>
+</head>
+<body>
+<div class="container">
+    <header>
+        <a class="logo" href="#">
+            <img src="{% static 'images/header/logo.svg' %}" alt="logo" width="87.75px" height="48px">
+        </a>
+        <nav class="header__nav">
+            <a class="header__nav__link" href="#">Team</a>
+            <a class="header__nav__link active" href="#">Main Page</a>
+            <a class="header__nav__link" href="#">About</a>
+            <a class="header__nav__link" href="#">Content</a>
+        </nav>
+        <div class="header__social-networks-links">
+            <a href="#">Follow us on</a>
+            <a href="#">
+                <img src="{% static 'images/header/twitter_icon.svg' %}" alt="twitter">
+            </a>
+            <a href="#">
+                <img src="{% static 'images/header/facebook_icon.svg' %}" alt="facebook">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main__container">
+            <div class="main__container__login">
+                <h2>Sign up</h2>
+
+{% if messages %}
+    <p class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">
+                {{ message|safe }}
+
+            </li>
+        {% endfor %}
+    </p>
+{% endif %}
+                <form method="post">
+{% csrf_token %}
+{% block content %}
+<label>
+    {{form.email.label}}<br>
+    {{form.email}}<br>
+
+</label>
+<label>
+
+    {{form.username.label}}<br>
+    {{form.username}}<br>
+
+</label>
+<label>
+    {{form.password1.label}}<br>
+    {{form.password1}}<br>
+
+</label>
+<label>
+    {{form.password2.label}}<br>
+   {{form.password2}}<br>
+
+</label>
+<label>
+    {{form.group.label}}<br>
+    {{form.group}}<br>
+
+</label>
+
+{% endblock %}
+
+                    <a href="{% url 'home' %}"><button class="btn login-btn">Sign up</button></a>
+
+                    <a href="#">By signing in you agree with our Terms of Policy</a>
+
+</form>
+
+                <a href="{% url 'login' %}"><button class="btn create-btn">Have an account?</button></a>
+                <button class="btn google-btn">
+                    <img src="{% static 'images/login/google.svg' %}" alt="google">
+                    Continue with Google
+                </button>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

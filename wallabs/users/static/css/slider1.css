@@ -1,0 +1,42 @@
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+}
+
+.slider .slick-arrow{
+    font-size: 0;
+    border: none;
+}
+
+.slider__item{
+    text-align: center;
+    border: none;
+    overflow: hidden;
+}
+
+.image{
+    border-radius: 7px;
+    width: 171.4px;
+    height: 114.2px;
+}
+
+.main__container__main label{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+
+label h2{
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: 700px;
+}

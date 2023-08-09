@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="{% static '% static 'images\favicon.svg">
+        <title>forawatch</title>
+        <link rel="stylesheet" href="{% static 'css/reset_chat.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/header_chat.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/search_chat.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style_chat.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/slider_chat.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    </head>
+    <body>
+    <div class="container">
+        <aside>
+            <a class="logo" href="#">
+                <img src="{% static 'images\header\logo_signed.svg' %}" alt="logo">
+            </a>
+            <nav class="aside__nav">
+                <a class="home" href="{% url 'home:home' %}"></a>
+                <a class="friends" href="#"></a>
+                <a class="play" href="{% url 'chat-page' %}"></a>
+                <a class="settings" href="#"></a>
+            </nav>
+            <a href="{% url 'login' %}">
+                <img src="{% static 'images\header\Exit.svg' %}" alt="exit">
+            </a>
+        </aside>
+        <main>
+            <div class="main__container">
+                <div class="main__container__main">
+                    <div class="top">
+                    <section class="control">
+                        <article class="room">
+                            <div class="info__room">
+                              <div class="first-row__room">
+                                <div class="name__room"><img src="{% static 'images/main/lock.svg' %}" alt="lock">Name: Room 007</div>
+                                <div>Owner: James</div>
+                              </div>
+                              <div class="second-row__room">
+                                <div class="name__room"><img src="{% static 'images/main/film-icon.svg' %}" alt="film-icon">Topic: Watching Wednesday series</div>
+                                <div>Status: On pause</div>
+                              </div>
+                            </div>
+                            <div class="join">
+                                <div class="btns__join">
+                                    <button class="btn__join">Leave</button>
+                                    <button class="btn__join">Complain</button>
+                                </div>
+                                    <div class="info__join">Time in room elapsed: 2 hours 5 minutes</div>
+                            </div>
+                        </article>
+                        <article class="watchers">
+                            <div class="title__watchers">Watchers:</div>
+                            <div class="second-row__watchers">
+                                <div class="connected__watchers">You, Julia, James, Olivia, Patrick, John, Michael and 5 others</div>
+                                <button class="btn__watchers">See all connected users</button>
+                            </div>
+                        </article>
+                    </section>
+                    </div>
+                    <div class="middle">
+                    <div class="kinobox_player" style="width: 750px;"></div>
+                        <script src="https://kinobox.tv/kinobox.min.js"></script>
+                        <script src="{% static 'js\player.js' %}"></script>
+                        <script>
+                            new Kinobox('.kinobox_player', {
+                                token: 'a52aa739526d4ef4a6b513c564f399db',
+                                search: {
+                                    kinopoisk: '505898',
+                                    imdb: 'tt1630029',
+                                    title: 'Аватар: Путь воды'
+                                },
+                                view: {
+                                    defaultMenu: 'menuList',
+                                    mobileMenu: 'menuButton',
+                                    format: '{N} :: {T} ({Q})',
+                                    limit: 5,
+                                    open: false,
+                                },
+                                hide: ['videocdn', 'ustore'],
+                                order: ['kodik', 'alloha'],
+                                params: {
+                                    all: {
+                                        poster: 'https://example.org/poster.jpg',
+                                    },
+                                    alloha: {
+                                        autoplay: 1
+                                    },
+                                    kodik: {
+                                        hide_selectors: true
+                                    }
+                                }
+                            }).init();
+                        </script>
+                    <div class="chat-wrapper">
+                        <div class="chat-header">
+                          <h2>Movie Discussion</h2>
+                        </div>
+                        <div class="chat-messages">
+                          <div class="message received">
+                            <img src="{% static 'images/chat/chat.svg' %}" alt="User">
+                            <div class="message-received">
+                                <h4>Kakashka</h4>
+                            <p>you are in a group chat, follow the rules of decency.</p>
+                            </div>
+                          </div>
+
+                            <div
+	                            class="chat__item__container"
+	                            id="id_chat_item_container"
+                                >
+
+                          <div class="message received">
+
+
+                        </div>
+                        </div>
+                            </div>
+                        <div class="chat-form">
+                          <input type="text" placeholder="Write a message..." id="id_message_send_input">
+                          <button type="submit" id="id_message_send_button">Send</button>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                        <article class="film-part">
+                            <div class="description">
+                                <div class="title__description">Avatar: The Way of Water</div>
+                                <div class="text__description">
+                                    <p>The Way of Water follows the journey of Jake Sully and Neytiri newfound family of five children. Despite their best efforts to keep their family together, a familiar threat resurfaces because Earth is dying, and forces the Sully family to become refugees and flee to the land of the Metkayina clan in the Pandoran oceans. There, the family becomes entangled in a struggle for survival.</p>
+                                </div>
+                            </div>
+            
+                            <div class="movie-selection">
+                                <button>Suggest a new film</button>
+                                <p>Film will be chosen after a voting between watchers</p>
+                            </div>
+            
+                            <div class="film-ratings">
+                                <div class="btns__film-ratings">
+                                    <button><img src="{% static 'images/main/bigrocket-down.svg' %}" alt="bigrocket-down"></button>
+                                    <button><img src="{% static 'images/main/bigrocket-up.svg' %}" alt="bigrocket-up"></button>
+                                </div>
+                                <p>Film ratings:</p>
+                                <p> 500 <img src="{% static 'images/main/minirocket-down.svg' %}" alt="minirocket-down">/ 300 <img src="{% static 'images/main/minirocket-up.svg' %}" alt="minirocket-up"></p>
+                            </div>
+                        </article>
+                    </div>                                                                                                           
+                </div>
+            </div>
+        </main>
+    </div>
+    	<script>
+	const chatSocket = new WebSocket("ws://" + window.location.host + "/");
+	chatSocket.onopen = function (e) {
+		console.log("The connection was setup successfully !");
+	};
+	chatSocket.onclose = function (e) {
+		console.log("Something unexpected happened !");
+	};
+	document.querySelector("#id_message_send_input").focus();
+	document.querySelector("#id_message_send_input").onkeyup = function (e) {
+		if (e.keyCode == 13) {
+		document.querySelector("#id_message_send_button").click();
+		}
+	};
+	document.querySelector("#id_message_send_button").onclick = function (e) {
+		var messageInput = document.querySelector(
+		"#id_message_send_input"
+		).value;
+		chatSocket.send(JSON.stringify({ message: messageInput, username : "{{request.user.username}}"}));
+	};
+	chatSocket.onmessage = function (e) {
+		const data = JSON.parse(e.data);
+		var div = document.createElement("div");
+		div.innerHTML = '<br>' +data.username + ':' + data.message + '<br>';
+		document.querySelector("#id_message_send_input").value = "";
+		document.querySelector("#id_chat_item_container").appendChild(div);
+	};
+	</script>
+    </body>
+</html>

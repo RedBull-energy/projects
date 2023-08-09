@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="{% static 'images\favicon.svg' %}">
+        <title>forawatch</title>
+        <link rel="stylesheet" href="{% static 'css/reset_home.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/header_home.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/search.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/slider_home.css' %}"/>
+
+    </head>
+    <body>
+    </body>
+    <div class="container">
+        <aside>
+            <a class="logo" href="#">
+                <img src="{% static 'images/header/logo_signed.svg' %}" alt="logo">
+
+            </a>
+            <nav class="aside__nav">
+                <a class="home" href="#"></a>
+                <a class="friends" href="#"></a>
+                <a class="play" href="{% url 'chat-page' %}"></a>
+                <a class="settings" href="#"></a>
+            </nav>
+            <a href="{% url 'login' %}">
+                <img src="{% static 'images/header/Exit.svg' %}" alt="exit">
+
+            </a>
+        </aside>
+        <main>
+            <div class="main__container">
+                <div class="main__container__main">
+                    <div class="search">
+                        <h2>Welcome to your <font color="#FAE596">newest</font> and <font color="#FAE596">best</font><br> 
+                            streaming platform!</h2>
+                            <div class="search__search-and-filter-container">
+                                <div class="search__form">
+                                    <form action="">
+                                        <label>
+                                            <input class="search__form__input" type="text" placeholder="Search">
+                                        </label>
+                                    </form>
+                                </div>
+                                <div class="filter_form">
+                                    <img class="filter-button" src="{% static 'images/search/filter.svg' %}" alt="filter">
+                                    <div class="filter-add-button">
+                                        <img src="{% static 'images/search/plus.svg' %}" alt="plus">
+                                        <p>Filter</p>
+                                    </div>
+                                    <div class="filter__form__categories">
+                                        <div class="filter__form__category">
+                                            <p>Anime</p>
+                                            <img src="{% static 'images/search/cross.svg' %}" alt="cross">
+                                        </div>
+                                        <div class="filter__form__category accent">
+                                            <p>Comedy</p>
+                                            <img src="{% static 'images/search/cross.svg' %}" alt="cross">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                <label>
+                <h2>Series</h2>
+                    <div class="slider">
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series1.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series2.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series3.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series4.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series5.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series6.webp' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series7.jpg' %}" class="image" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="{% static 'images/slider/series/series8.jpg' %}" class="image" alt="">
+                          </div>
+                    </div>
+                </label>
+                <label>
+                    <h2>Films</h2>
+                        <div class="slider">
+                            <div class="slider__item">
+                                <img src="{% static 'images/slider/films/1.jpg' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/2.png' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/3.jpg' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/4.jpg' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/5.jpg' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/6.jpg' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/7.webp' %}" class="image" alt="">
+                              </div>
+                              <div class="slider__item">
+                                <img src="{% static 'images/slider/films/8.webp' %}" class="image" alt="">
+                              </div>
+                        </div>
+                    </label>
+                    <label>
+                        <h2>Anime</h2>
+                            <div class="slider">
+                                <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/1.jpg' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/2.jpg' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/3.jpg' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/4.jpg' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/5.avif' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/6.webp' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/7.png' %}" class="image" alt="">
+                                  </div>
+                                  <div class="slider__item">
+                                    <img src="{% static 'images/slider/anime/8.jpg' %}" class="image" alt="">
+                                  </div>
+                            </div>
+                        </label>
+                    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                    <script src="{% static 'js/slick.min.js' %}"></script>
+                    <script src="{% static 'js/script.js' %}"></script>
+                </div>
+            </div>
+        </main>
+    </div>
+    </body>
+</html>
